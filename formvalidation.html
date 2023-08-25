@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            form{
+                  margin-left:600px;
+                  width:1000px; 
+                  box-sizing: auto;
+
+                }
+                body{
+                   font: size 15px;;
+                   background-color: rgba(247, 246, 215, 0.655);
+                   margin-left: auto;
+                }
+                h1{
+                 padding-left: 50px;
+                }
+                input{
+                    border: 2px rgb(43, 42, 42) solid;
+                }
+        </style>
+        <script>
+            function validateform(){
+                let x=document.forms["myform"] ["fname"].value;
+                if(x==""){
+                    alert("Name should be filled");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Form Validation</h1>
+        <form name="myform"
+        action="/action_page.php"
+        onsubmit="return validateform()"
+        method="post">
+        Name: <input type="text" name ="fname"><br>
+        <br>
+        <input type="submit" value ="submit">
+      </form>
+    </body>
+</html>
